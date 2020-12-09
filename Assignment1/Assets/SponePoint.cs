@@ -6,13 +6,14 @@ using UnityEngine;
 public class SponePoint : MonoBehaviour
 {
     [SerializeField]
-    GameObject playerPrefab;
+    public GameObject playerPrefab;
 
-    static PlayerCharacterController player = null;
+    public static PlayerCharacterController player = null;
 
     // Start is called before the first frame update
     void Start()
     {
+
         if (player == null)
             player = Instantiate(playerPrefab, transform.position, transform.rotation).GetComponent<PlayerCharacterController>();
 
