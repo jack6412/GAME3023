@@ -21,27 +21,13 @@ public class BattleSystem : MonoBehaviour
 
     private void Start()
     {
-        NextTerm();
+        //NextTerm();
     }
     private void Update()
     {
         
     }
 
-    public void NextTerm()
-    {
-        players[(int)CurrentTerm].PlayerTernEnd();
-
-        //Switch turn
-        CurrentTerm = (Phase)(((int)CurrentTerm + 1) % 2);
-
-
-        players[(int)CurrentTerm].PlayerTern();
-
-        //StartCoroutine(TextLog(players[(int)CurrentTerm].gameObject.name));
-
-        Debug.Log("Next Tern");
-    }
 
     //Button action
     public void Attack()

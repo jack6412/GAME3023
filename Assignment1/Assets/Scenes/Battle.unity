@@ -1897,7 +1897,8 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 8984122d73e5a974f8d56ccf83c60f8b, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 160
-    m_Data: {fileID: -8141154783049856699, guid: 701784ef6a311984cbe11607b300de11, type: 3}
+    m_Data: {fileID: -8141154783049856699, guid: 701784ef6a311984cbe11607b300de11,
+      type: 3}
   m_TileMatrixArray:
   - m_RefCount: 160
     m_Data:
@@ -2538,7 +2539,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 3201824641488772803, guid: da04ad9ed457b584783a51b974e45814, type: 3}
+  m_Sprite: {fileID: 3201824641488772803, guid: da04ad9ed457b584783a51b974e45814,
+    type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2568,6 +2570,7 @@ GameObject:
   - component: {fileID: 850076683}
   - component: {fileID: 850076682}
   - component: {fileID: 850076681}
+  - component: {fileID: 850076684}
   m_Layer: 5
   m_Name: But_Defend
   m_TagString: Untagged
@@ -2670,7 +2673,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 3201824641488772803, guid: da04ad9ed457b584783a51b974e45814, type: 3}
+  m_Sprite: {fileID: 3201824641488772803, guid: da04ad9ed457b584783a51b974e45814,
+    type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2688,6 +2692,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 850076679}
   m_CullTransparentMesh: 0
+--- !u!114 &850076684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 850076679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ef58c5aea185e248aa6bf341816afcc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound: {fileID: 8300000, guid: 8be3d55441d3076429f48b9ea61a1487, type: 3}
 --- !u!1 &963052036
 GameObject:
   m_ObjectHideFlags: 0
@@ -2825,7 +2842,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -7740392975365968046, guid: da04ad9ed457b584783a51b974e45814, type: 3}
+  m_Sprite: {fileID: -7740392975365968046, guid: da04ad9ed457b584783a51b974e45814,
+    type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3673,19 +3691,26 @@ Tilemap:
   - m_RefCount: 14
     m_Data: {fileID: 162598280021495188, guid: 701784ef6a311984cbe11607b300de11, type: 3}
   - m_RefCount: 14
-    m_Data: {fileID: 6986815404043503449, guid: 701784ef6a311984cbe11607b300de11, type: 3}
+    m_Data: {fileID: 6986815404043503449, guid: 701784ef6a311984cbe11607b300de11,
+      type: 3}
   - m_RefCount: 14
-    m_Data: {fileID: 7808538442560958302, guid: 701784ef6a311984cbe11607b300de11, type: 3}
+    m_Data: {fileID: 7808538442560958302, guid: 701784ef6a311984cbe11607b300de11,
+      type: 3}
   - m_RefCount: 14
-    m_Data: {fileID: 8725674123217878092, guid: 701784ef6a311984cbe11607b300de11, type: 3}
+    m_Data: {fileID: 8725674123217878092, guid: 701784ef6a311984cbe11607b300de11,
+      type: 3}
   - m_RefCount: 2
-    m_Data: {fileID: -3847046830068840946, guid: 701784ef6a311984cbe11607b300de11, type: 3}
+    m_Data: {fileID: -3847046830068840946, guid: 701784ef6a311984cbe11607b300de11,
+      type: 3}
   - m_RefCount: 2
-    m_Data: {fileID: -1535460398215270255, guid: 701784ef6a311984cbe11607b300de11, type: 3}
+    m_Data: {fileID: -1535460398215270255, guid: 701784ef6a311984cbe11607b300de11,
+      type: 3}
   - m_RefCount: 2
-    m_Data: {fileID: -1688388452655382417, guid: 701784ef6a311984cbe11607b300de11, type: 3}
+    m_Data: {fileID: -1688388452655382417, guid: 701784ef6a311984cbe11607b300de11,
+      type: 3}
   - m_RefCount: 2
-    m_Data: {fileID: 3280235342217261273, guid: 701784ef6a311984cbe11607b300de11, type: 3}
+    m_Data: {fileID: 3280235342217261273, guid: 701784ef6a311984cbe11607b300de11,
+      type: 3}
   m_TileMatrixArray:
   - m_RefCount: 64
     m_Data:
@@ -3968,7 +3993,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -938148447844556549, guid: 616d4c3864b30f44f875f082a5708412, type: 3}
+  m_Sprite: {fileID: -938148447844556549, guid: 616d4c3864b30f44f875f082a5708412,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -4073,6 +4099,7 @@ GameObject:
   - component: {fileID: 1914753196}
   - component: {fileID: 1914753195}
   - component: {fileID: 1914753194}
+  - component: {fileID: 1914753197}
   m_Layer: 5
   m_Name: But_attack
   m_TagString: Untagged
@@ -4175,7 +4202,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 3201824641488772803, guid: da04ad9ed457b584783a51b974e45814, type: 3}
+  m_Sprite: {fileID: 3201824641488772803, guid: da04ad9ed457b584783a51b974e45814,
+    type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4193,6 +4221,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1914753192}
   m_CullTransparentMesh: 0
+--- !u!114 &1914753197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1914753192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ef58c5aea185e248aa6bf341816afcc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound: {fileID: 8300000, guid: af4e65ee16c7e1241afb631cfc27fca4, type: 3}
 --- !u!1 &1944493699
 GameObject:
   m_ObjectHideFlags: 0
@@ -4307,7 +4348,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 3201824641488772803, guid: da04ad9ed457b584783a51b974e45814, type: 3}
+  m_Sprite: {fileID: 3201824641488772803, guid: da04ad9ed457b584783a51b974e45814,
+    type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4383,7 +4425,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1210213693015814607, guid: af9ac02259aed5a4d9f1d53a0c6ea13d, type: 3}
+  m_Sprite: {fileID: 1210213693015814607, guid: af9ac02259aed5a4d9f1d53a0c6ea13d,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
