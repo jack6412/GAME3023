@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+using UnityEditor;
 
 
 enum Phase
@@ -19,72 +21,115 @@ public class BattleSystem : MonoBehaviour
     [SerializeField]
     public Text message;
 
-    private void Start()
-    {
-        //NextTerm();
-    }
-    private void Update()
-    {
-        
-    }
+    public AudioClip Attack_sound;
+    public AudioClip Defend_sound;
+    public AudioClip escape_sound;
+
+    public SceneAsset tag_Name;
+
+    bool finish = false;
+    bool esc = false;
 
 
+    private AudioSource source { get { return GetComponent<AudioSource>(); } }
     //Button action
     public void Attack()
     {
-        players[(int)CurrentTerm].PlayerTernEnd();
+        if (finish == false)
+        {
+            finish = true;
+            gameObject.AddComponent<AudioSource>();
 
-        //Switch turn
-        CurrentTerm = (Phase)(((int)CurrentTerm + 1) % 2);
+            source.PlayOneShot(Attack_sound);
+
+            players[(int)CurrentTerm].PlayerTernEnd();
+
+            //Switch turn
+            CurrentTerm = (Phase)(((int)CurrentTerm + 1) % 2);
 
 
-        players[(int)CurrentTerm].PlayerTern();
+            players[(int)CurrentTerm].PlayerTern();
 
-        StartCoroutine(TextLog(players[(int)CurrentTerm].gameObject.name, " Attack."));
+            StartCoroutine(TextLog(players[(int)CurrentTerm].gameObject.name, " Attack."));
 
-        Debug.Log("Attack");
+            Debug.Log("Attack");
+        }
     }
     public void Deffend()
     {
-        players[(int)CurrentTerm].PlayerTernEnd();
+        if (finish == false)
+        {
+            finish = true;
+            gameObject.AddComponent<AudioSource>();
 
-        //Switch turn
-        CurrentTerm = (Phase)(((int)CurrentTerm + 1) % 2);
+            source.PlayOneShot(Defend_sound);
+
+            players[(int)CurrentTerm].PlayerTernEnd();
+
+            //Switch turn
+            CurrentTerm = (Phase)(((int)CurrentTerm + 1) % 2);
 
 
-        players[(int)CurrentTerm].PlayerTern();
+            players[(int)CurrentTerm].PlayerTern();
 
-        StartCoroutine(TextLog(players[(int)CurrentTerm].gameObject.name, " Defend."));
+            StartCoroutine(TextLog(players[(int)CurrentTerm].gameObject.name, " Defend."));
 
-        Debug.Log("Deffend");
+            Debug.Log("Deffend");
+        }
     }
     public void Skill()
     {
-        players[(int)CurrentTerm].PlayerTernEnd();
+        if (finish == false)
+        {
+            finish = true;
+            //gameObject.AddComponent<AudioSource>();
 
-        //Switch turn
-        CurrentTerm = (Phase)(((int)CurrentTerm + 1) % 2);
+            //source.PlayOneShot(sound);
+
+            players[(int)CurrentTerm].PlayerTernEnd();
+
+            //Switch turn
+            CurrentTerm = (Phase)(((int)CurrentTerm + 1) % 2);
 
 
-        players[(int)CurrentTerm].PlayerTern();
+            players[(int)CurrentTerm].PlayerTern();
 
-        StartCoroutine(TextLog(players[(int)CurrentTerm].gameObject.name, " use Skill."));
+            StartCoroutine(TextLog(players[(int)CurrentTerm].gameObject.name, " use Skill."));
 
-        Debug.Log("Skills");
+            Debug.Log("Skills");
+        }
     }
     public void Escape()
     {
-        players[(int)CurrentTerm].PlayerTernEnd();
+        if (finish == false)
+        {
+            finish = true;
 
-        //Switch turn
-        CurrentTerm = (Phase)(((int)CurrentTerm + 1) % 2);
+            gameObject.AddComponent<AudioSource>();
 
 
-        players[(int)CurrentTerm].PlayerTern();
+            players[(int)CurrentTerm].PlayerTernEnd();
 
-        StartCoroutine(TextLog(players[(int)CurrentTerm].gameObject.name, " Escape."));
+            //Switch turn
+            CurrentTerm = (Phase)(((int)CurrentTerm + 1) % 2);
 
-        Debug.Log("Escape");
+
+            players[(int)CurrentTerm].PlayerTern();
+
+            if(Random.Range(0,2)>=1)
+            {
+                esc = true;
+                source.PlayOneShot(escape_sound);
+                StartCoroutine(TextLog(players[(int)CurrentTerm].gameObject.name, " has been Escape."));
+            }
+            else
+                StartCoroutine(TextLog(players[(int)CurrentTerm].gameObject.name, " Escape fell."));
+
+
+            //Debug.Log("Escape " + finish);
+        }
+            
+        
     }
 
     IEnumerator TextLog(string text, string M)
@@ -105,6 +150,14 @@ public class BattleSystem : MonoBehaviour
             yield return new WaitForSeconds(0.1f);
         }
 
+        finish = false;
+        Debug.Log("text "+finish);
 
+        //escape action
+        if(esc == true && finish == false)
+        {
+            SceneManager.LoadScene(tag_Name.name);
+            esc = false;
+        }
     }
 }
