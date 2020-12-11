@@ -17,6 +17,7 @@ public class Menu : MonoBehaviour
     {
         User_Scream.gameObject.SetActive(true);
         Start_Scream.gameObject.SetActive(false);
+
         StartCoroutine(ChangeScene());
     }
 

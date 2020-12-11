@@ -6,13 +6,21 @@ using System.Diagnostics;
 
 public class Save_Load : MonoBehaviour
 {
+    public GameObject View;
+    public GameObject setting;
 
     public void PlayerPositionSave()
     {
 
         string Position = transform.position.x.ToString() + "," + transform.position.y.ToString();
+        string scrip = gameObject.tag;
         PlayerPrefs.SetString("Location", Position);
         PlayerPrefs.Save();
+
+        UnityEngine.Debug.Log(scrip);
+
+        View.gameObject.SetActive(false);
+        setting.gameObject.SetActive(true);
     }
 
     public void PlayerPositionLoad()

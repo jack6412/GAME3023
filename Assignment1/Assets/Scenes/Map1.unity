@@ -2272,7 +2272,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 46
-      m_TileSpriteIndex: 46
+      m_TileSpriteIndex: 52
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -2442,7 +2442,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 37
-      m_TileSpriteIndex: 10
+      m_TileSpriteIndex: 46
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -9386,9 +9386,8 @@ Tilemap:
   - m_RefCount: 8
     m_Data: {fileID: -8968389787681042088, guid: 701784ef6a311984cbe11607b300de11,
       type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: -4954742672101255831, guid: 701784ef6a311984cbe11607b300de11,
-      type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 4
     m_Data: {fileID: -6014281745691687770, guid: 701784ef6a311984cbe11607b300de11,
       type: 3}
@@ -9494,7 +9493,7 @@ Tilemap:
     m_Data: {fileID: -746843418931626205, guid: 701784ef6a311984cbe11607b300de11,
       type: 3}
   - m_RefCount: 1
-    m_Data: {fileID: -155129313630589030, guid: 701784ef6a311984cbe11607b300de11,
+    m_Data: {fileID: -4954742672101255831, guid: 701784ef6a311984cbe11607b300de11,
       type: 3}
   - m_RefCount: 3
     m_Data: {fileID: 8144699696999271006, guid: 701784ef6a311984cbe11607b300de11,
@@ -9511,8 +9510,9 @@ Tilemap:
   - m_RefCount: 18
     m_Data: {fileID: -3328804424743113820, guid: 701784ef6a311984cbe11607b300de11,
       type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: -155129313630589030, guid: 701784ef6a311984cbe11607b300de11,
+      type: 3}
   m_TileMatrixArray:
   - m_RefCount: 890
     m_Data:
@@ -9569,7 +9569,6 @@ GameObject:
   m_Component:
   - component: {fileID: 976939263}
   - component: {fileID: 976939262}
-  - component: {fileID: 976939261}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -9577,14 +9576,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &976939261
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 976939260}
-  m_Enabled: 1
 --- !u!20 &976939262
 Camera:
   m_ObjectHideFlags: 0
