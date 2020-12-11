@@ -864,7 +864,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 9070658393748055628}
-  CaveBattle:
+  name:
     serializedVersion: 2
     m_Bits: 256
 --- !u!50 &9070658393748055628

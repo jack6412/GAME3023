@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Cave1
   - Map1
+  - Battle
   layers:
   - Default
   - TransparentFX

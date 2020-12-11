@@ -72,7 +72,7 @@ public class BattleSystem : MonoBehaviour
 
         Debug.Log("Skills");
     }
-    public void Item()
+    public void Escape()
     {
         players[(int)CurrentTerm].PlayerTernEnd();
 
@@ -82,9 +82,9 @@ public class BattleSystem : MonoBehaviour
 
         players[(int)CurrentTerm].PlayerTern();
 
-        StartCoroutine(TextLog(players[(int)CurrentTerm].gameObject.name, " use item."));
+        StartCoroutine(TextLog(players[(int)CurrentTerm].gameObject.name, " Escape."));
 
-        Debug.Log("Items");
+        Debug.Log("Escape");
     }
 
     IEnumerator TextLog(string text, string M)
