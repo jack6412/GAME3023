@@ -3,11 +3,15 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
 using System.Diagnostics;
+using UnityEditor;
+using UnityEngine.SceneManagement;
 
 public class Save_Load : MonoBehaviour
 {
     public GameObject View;
     public GameObject setting;
+
+    public SceneAsset tag_Name;
 
     public void PlayerPositionSave()
     {
@@ -25,6 +29,8 @@ public class Save_Load : MonoBehaviour
 
     public void PlayerPositionLoad()
     {
+        View.gameObject.SetActive(false);
+        setting.gameObject.SetActive(true);
 
         string Load = PlayerPrefs.GetString("Location");
 
@@ -36,5 +42,13 @@ public class Save_Load : MonoBehaviour
             transform.position = new Vector2(float.Parse(data[0]), float.Parse(data[1]));
         }
 
+    }
+
+    public void PlayerQuit()
+    {
+        View.gameObject.SetActive(false);
+        setting.gameObject.SetActive(true);
+
+        SceneManager.LoadScene(tag_Name.name);
     }
 }

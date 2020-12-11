@@ -24,6 +24,7 @@ public class BattleSystem : MonoBehaviour
     public AudioClip Attack_sound;
     public AudioClip Defend_sound;
     public AudioClip escape_sound;
+    public AudioClip Heal_sound;
 
     public SceneAsset tag_Name;
 
@@ -77,14 +78,14 @@ public class BattleSystem : MonoBehaviour
             Debug.Log("Deffend");
         }
     }
-    public void Skill()
+    public void Heal()
     {
         if (finish == false)
         {
             finish = true;
-            //gameObject.AddComponent<AudioSource>();
+            gameObject.AddComponent<AudioSource>();
 
-            //source.PlayOneShot(sound);
+            source.PlayOneShot(Heal_sound);
 
             players[(int)CurrentTerm].PlayerTernEnd();
 
@@ -94,7 +95,7 @@ public class BattleSystem : MonoBehaviour
 
             players[(int)CurrentTerm].PlayerTern();
 
-            StartCoroutine(TextLog(players[(int)CurrentTerm].gameObject.name, " use Skill."));
+            StartCoroutine(TextLog(players[(int)CurrentTerm].gameObject.name, " use Heal."));
 
             Debug.Log("Skills");
         }
