@@ -11,7 +11,9 @@ public class Save_Load : MonoBehaviour
     public GameObject View;
     public GameObject setting;
 
-    public SceneAsset tag_Name;
+    [SerializeField]
+    //public SceneAsset tag_Name;
+    public string tag_Name;
 
     public void PlayerPositionSave()
     {
@@ -49,6 +51,6 @@ public class Save_Load : MonoBehaviour
         View.gameObject.SetActive(false);
         setting.gameObject.SetActive(true);
 
-        SceneManager.LoadScene(tag_Name.name);
+        SceneManager.LoadScene(tag_Name);
     }
 }

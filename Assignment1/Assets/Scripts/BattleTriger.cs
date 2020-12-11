@@ -7,6 +7,8 @@ public class BattleTriger : MonoBehaviour
 {
     public AudioClip sound;
 
+    //public Animator Start;
+
     private AudioSource source { get { return GetComponent<AudioSource>(); } }
 
     void Update()
@@ -29,7 +31,8 @@ public class BattleTriger : MonoBehaviour
     }
     IEnumerator ChangeScene()
     {
-        yield return new WaitForSeconds(1);
+        //Start.SetTrigger("BattleStart");
+        yield return new WaitForSeconds(0);
         SceneManager.LoadScene(tag);
     }
 

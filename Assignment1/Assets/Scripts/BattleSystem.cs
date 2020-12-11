@@ -26,7 +26,9 @@ public class BattleSystem : MonoBehaviour
     public AudioClip escape_sound;
     public AudioClip Heal_sound;
 
-    public SceneAsset tag_Name;
+    [SerializeField]
+    //public SceneAsset tag_Name;
+    public string tag_Name;
 
     bool finish = false;
     bool esc = false;
@@ -41,8 +43,8 @@ public class BattleSystem : MonoBehaviour
             finish = true;
             gameObject.AddComponent<AudioSource>();
 
+            //play sound effect
             source.PlayOneShot(Attack_sound);
-
             players[(int)CurrentTerm].PlayerTernEnd();
 
             //Switch turn
@@ -63,8 +65,8 @@ public class BattleSystem : MonoBehaviour
             finish = true;
             gameObject.AddComponent<AudioSource>();
 
+            //play sound effect
             source.PlayOneShot(Defend_sound);
-
             players[(int)CurrentTerm].PlayerTernEnd();
 
             //Switch turn
@@ -85,8 +87,8 @@ public class BattleSystem : MonoBehaviour
             finish = true;
             gameObject.AddComponent<AudioSource>();
 
+            //play sound effect
             source.PlayOneShot(Heal_sound);
-
             players[(int)CurrentTerm].PlayerTernEnd();
 
             //Switch turn
@@ -117,6 +119,7 @@ public class BattleSystem : MonoBehaviour
 
             players[(int)CurrentTerm].PlayerTern();
 
+            //check chance to escape
             if(Random.Range(0,2)>=1)
             {
                 esc = true;
@@ -124,7 +127,7 @@ public class BattleSystem : MonoBehaviour
                 StartCoroutine(TextLog(players[(int)CurrentTerm].gameObject.name, " has been Escape."));
             }
             else
-                StartCoroutine(TextLog(players[(int)CurrentTerm].gameObject.name, " Escape fell."));
+                StartCoroutine(TextLog(players[(int)CurrentTerm].gameObject.name, " Escape Fell."));
 
 
             //Debug.Log("Escape " + finish);
@@ -157,7 +160,7 @@ public class BattleSystem : MonoBehaviour
         //escape action
         if(esc == true && finish == false)
         {
-            SceneManager.LoadScene(tag_Name.name);
+            SceneManager.LoadScene(tag_Name);
             esc = false;
         }
     }

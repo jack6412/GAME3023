@@ -3054,7 +3054,7 @@ MonoBehaviour:
   Defend_sound: {fileID: 8300000, guid: 8be3d55441d3076429f48b9ea61a1487, type: 3}
   escape_sound: {fileID: 8300000, guid: f7c241f949e84dd48bf7a6997b8ff429, type: 3}
   Heal_sound: {fileID: 8300000, guid: 65972ecefa24402429ca726b4f663432, type: 3}
-  tag_Name: {fileID: 102900000, guid: 7a2950fb2f72fcf4fbe4383f0d5a5a95, type: 3}
+  tag_Name: Cave1
 --- !u!4 &683138451
 Transform:
   m_ObjectHideFlags: 0

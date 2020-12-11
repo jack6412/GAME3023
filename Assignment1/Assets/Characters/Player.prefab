@@ -1140,7 +1140,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   View: {fileID: 3031685491824520528}
   setting: {fileID: 7587839444623291518}
-  tag_Name: {fileID: 102900000, guid: e2566ac5ecc8d074fac6ff06dd6a23c1, type: 3}
+  tag_Name: Menu
 --- !u!95 &6832342400768331633
 Animator:
   serializedVersion: 3
